@@ -3,6 +3,7 @@ from rest_framework.response import Response
 from .serializers import EmailSerializer
 from .utils import send_email
 
+
 class SendEmailView(APIView):
     def post(self, request):
         serializer = EmailSerializer(data=request.data)
